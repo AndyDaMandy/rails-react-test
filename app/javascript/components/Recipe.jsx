@@ -23,6 +23,8 @@ const Recipe = () => {
     return String(str).replace(/&lt;/g, "<").replace(/&gt;/g, ">");
   };
 
+  
+
   const ingredientList = () => {
     let ingredientList = "No ingredients available";
 
