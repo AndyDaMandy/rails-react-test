@@ -22,7 +22,6 @@ const Recipe = () => {
   const addHtmlEntities = (str) => {
     return String(str).replace(/&lt;/g, "<").replace(/&gt;/g, ">");
   };
-
   const deleteRecipe = () => {
     const url = `/api/v1/destroy/${params.id}`;
     const token = document.querySelector('meta[name="csrf-token"]').content;
@@ -90,6 +89,11 @@ const Recipe = () => {
                 __html: `${recipeInstruction}`,
               }}
             />
+          </div>
+          <div className="col-sm-12 col-lg-2">
+          <Link to={`/recipes/${recipe.id}/edit`} className="btn btn-primary">
+          Edit this recipes
+        </Link>
           </div>
           <div className="col-sm-12 col-lg-2">
             <button
